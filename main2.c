@@ -1,7 +1,4 @@
-
-#include <string.h>
-#include <stdio.h>
-#include "automat.c"
+#include "automat.h"
 
 int main(int argc, char *argv[]){
 

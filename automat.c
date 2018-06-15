@@ -1,10 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <dirent.h>
-#include <limits.h>
 #include "automat.h"
-#define HASH_MUL 31
-#define HASH_SIZE 26
 
 // Хеш-функция для строк [KP]
 unsigned int hash(char s)
