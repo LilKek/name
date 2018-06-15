@@ -1,7 +1,7 @@
-all: prog
+all: fsmatcher
 
-prog: main.o automat.o
-	gcc -Wall main.o automat.o -o prog
+fsmatcher: main.o automat.o
+	gcc -Wall main.o automat.o -o fsmatcher
 	
 main.o: main2.c
 	gcc -Wall -c main2.c -o main.o

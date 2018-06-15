@@ -32,7 +32,7 @@ void dir (char * dir_name, int substr_size, int al_size, char *substring){
                 	char dir[100];
                 	strcpy(dir, dir_name);
                 	int l = strlen(dir);
-                	dir[l] = '\\';
+                	dir[l] = '/';
                 	dir[l +1] = '\0';
 					
 					strncat (dir, d_name,100);
@@ -46,7 +46,7 @@ void dir (char * dir_name, int substr_size, int al_size, char *substring){
 }
 
 
-/*void list_dir (char * dir_name, int substr_size, int al_size, char *substring){
+void list_dir (char * dir_name, int substr_size, int al_size, char *substring){
     DIR * d;
 
 
@@ -104,12 +104,14 @@ void dir (char * dir_name, int substr_size, int al_size, char *substring){
                  
         
     }
-}*/
+}
 
 
 void open_file(char *file, int substr_size, int al_size, char *substring) {
-	FILE *ifp;
-    if( (ifp = fopen(file, "r")) == NULL) {
+	//FILE *ifp;
+    FILE *ifp = fopen(file, "r");
+    //if( (ifp = fopen(file, "r")) == NULL) {
+    if(ifp == NULL) {
         perror("fopen");
         return;
     }
