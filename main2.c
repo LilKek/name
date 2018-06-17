@@ -16,11 +16,8 @@ int main(int argc, char *argv[]){
 		dir(argv[2],substr_size, al_size, substring);
    		
 	}else{
-		if(strcmp(argv[0], "fsmatcher-r") == 0){
-			list_dir(argv[3],substr_size, al_size, substring);
-		}else
-			printf("Wrong argument");
-			return 0;
+		printf("Wrong argument");
+		return 0;
 	}
 
 	return 0;
